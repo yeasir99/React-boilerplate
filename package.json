@@ -1,0 +1,19 @@
+{
+  "name": "react-boilerplate",
+  "version": "0.1.0",
+  "description": "Bootstraping react with webpack, babel, eslint, prettier, jest and husky",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeasir99/react-boilerplate.git"
+  },
+  "author": "Yeasir Ahamed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yeasir99/react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/yeasir99/react-boilerplate#readme"
+}
