@@ -1,5 +1,7 @@
-import greet from './greet';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import '@babel/polyfill'
+import App from './App'
+import './style.css'
 
-greet();
-
-console.log('hello world');
+ReactDOM.render(<App />, document.getElementById('root'))
