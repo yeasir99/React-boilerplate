@@ -1,20 +1,21 @@
 import React from 'react'
-import { render, fireEvent } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import Counter from '../Counter'
 
 test('App', () => {
-  const { container } = render(<Counter />)
+  render(<Counter />)
 
-  const [increment, decrement] = container.querySelectorAll('button')
+  const increment = screen.getByRole('button', { name: /increment/i })
+  const decrement = screen.getByRole('button', { name: /decrement/i })
 
-  const messageDiv = container.firstChild.querySelector('div')
+  const message = screen.getByText(/current count/i)
 
-  expect(messageDiv).toHaveTextContent('0')
+  expect(message).toHaveTextContent('0')
 
   fireEvent.click(increment)
-  expect(messageDiv).toHaveTextContent('1')
+  expect(message).toHaveTextContent('1')
 
   fireEvent.click(decrement)
-  expect(messageDiv).toHaveTextContent('0')
+  expect(message).toHaveTextContent('0')
 })
