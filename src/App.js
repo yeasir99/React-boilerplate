@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
 import { hot } from 'react-hot-loader'
+import React, { useState } from 'react'
+import Counter from './Counter'
 
 const JustLazy = React.lazy(() => import('./JustLazy'))
 
@@ -16,6 +17,7 @@ const App = () => {
           <JustLazy />
         </React.Suspense>
       ) : null}
+      <Counter />
     </div>
   )
 }
